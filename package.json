@@ -11,9 +11,7 @@
     "branches": [
       "main"
     ],
-    "extends": [
-      "@codedependant/release-config-core"
-    ]
+    "extends": "@codedependant/release-config-core"
   },
   "scripts": {
     "commitlint": "commitlint-codedependant",
