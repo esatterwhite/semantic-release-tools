@@ -1,0 +1,70 @@
+{
+  "name": "@codedependant/release-config-core",
+  "version": "0.0.0",
+  "description": "Baseline shareable semantic-release configuration for codedependant projects",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "tap",
+    "test:ci": "tap",
+    "pretest": "npm run lint",
+    "pretest:ci": "npm run lint"
+  },
+  "keywords": [
+    "semantic-release",
+    "semantic-release-config",
+    "shareable-config",
+    "codedependant"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/esatterwhite/semantic-release-tools.git",
+    "directory": "packages/release-config-core"
+  },
+  "author": "Eric Satterwhite <esatterwhite@wi.rr.com>",
+  "bugs": {
+    "url": "https://github.com/esatterwhite/semantic-release-tools/issues"
+  },
+  "homepage": "https://github.com/esatterwhite/semantic-release-tools/packages/release-config-core#readme",
+  "license": "MIT",
+  "tap": {
+    "100": true,
+    "browser": false,
+    "esm": false,
+    "ts": false,
+    "jsx": false,
+    "check-coverage": true,
+    "coverage-report": [
+      "text",
+      "text-summary",
+      "json",
+      "json-summary",
+      "html"
+    ],
+    "output-file": ".tap",
+    "files": [
+      "test/unit"
+    ],
+    "nyc-arg": [
+      "--exclude=test/",
+      "--exclude=coverage/",
+      "--cwd ../../"
+    ]
+  },
+  "dependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-codedependant": "^2.1.5",
+    "handlebars": "^4.7.7",
+    "tap": "^14.11.0",
+    "tap-parser": "^10.1.0",
+    "tap-xunit": "^2.4.1"
+  }
+}
