@@ -6,6 +6,12 @@
   "directories": {
     "lib": "lib"
   },
+  "files": [
+    "lib/",
+    "index.js",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
@@ -20,6 +26,9 @@
     "shareable-config",
     "codedependant"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/esatterwhite/semantic-release-tools.git",
