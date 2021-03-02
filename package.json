@@ -1,0 +1,48 @@
+{
+  "name": "semantic-release-tools",
+  "version": "0.0.0",
+  "description": "Collection of shared configurations and tools for semantic-release",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "release": {
+    "npmPublish": true,
+    "branches": [
+      "main"
+    ],
+    "extends": [
+      "@codedependant/release-config-core"
+    ]
+  },
+  "scripts": {
+    "commitlint": "commitlint-codedependant",
+    "test": "./scripts/test-ci.sh",
+    "nyc": "nyc",
+    "test-all": "pnpm run -r --if-present test:ci --filter={packages}",
+    "preinstall": "./scripts/preinstall.js",
+    "release": "multi-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/esatterwhite/semantic-release-tools.git"
+  },
+  "keywords": [
+    "semantic-release",
+    "release.config.js",
+    "codedependant"
+  ],
+  "author": "Eric Satterwhite",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esatterwhite/semantic-release-tools/issues"
+  },
+  "homepage": "https://github.com/esatterwhite/semantic-release-tools#readme",
+  "devDependencies": {
+    "@codedependant/multi-release": "^1.0.5",
+    "@codedependant/release-config-core": "*",
+    "nyc": "^15.1.0",
+    "tap": "^14.11.0",
+    "tap-parser": "^10.1.0"
+  }
+}
