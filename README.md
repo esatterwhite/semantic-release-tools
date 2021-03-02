@@ -57,7 +57,7 @@ $ pnpm run -r test
 
 ## Authors
 
-* [**Eric Satterwhite**](mailto:esatterwhite@wi.rr..com) &lt;esatterwhite@wi.rr..com&gt;
+* [**Eric Satterwhite**](mailto:esatterwhite@wi.rr..com) &lt;esatterwhite@wi.rr.com&gt;
 
 
 [pnpm]: https://pnpmjs.org
