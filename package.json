@@ -1,6 +1,6 @@
 {
   "name": "@codedependant/release-config-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Baseline shareable semantic-release configuration for codedependant projects",
   "main": "index.js",
   "directories": {
