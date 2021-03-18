@@ -1,6 +1,6 @@
 {
   "name": "@codedependant/release-config-npm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Baseline shareable semantic-release configuration for publishing npm packages",
   "main": "index.js",
   "directories": {
