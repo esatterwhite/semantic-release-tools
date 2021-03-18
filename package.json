@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/esatterwhite/semantic-release-tools#readme",
   "devDependencies": {
-    "@codedependant/multi-release": "^1.0.5",
+    "@codedependant/multi-release": "^1.0.6",
     "@codedependant/release-config-core": "*",
     "nyc": "^15.1.0",
     "tap": "^14.11.0",
