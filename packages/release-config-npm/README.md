@@ -11,14 +11,14 @@
 
 Shareable semantic-release configuration for internal projects with which to
 publish npm packages to the internal github registry.
-It extends the [baseline](../release-config-logdna/READEME.md) configuration.
+It extends the [baseline](../release-config-core/READEME.md) configuration.
 
 The shareable configuration can be configured in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration):
 
 ## Installation
 
 ```shell
-$ npm install --save-dev @answerbook/release-config-npm
+$ npm install --save-dev @codedependant/release-config-npm
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ $ npm install --save-dev @answerbook/release-config-npm
 {
   "release": {
     "branches": ["main"],
-    "extends": ["@answerbook/release-config-npm"]
+    "extends": ["@codedependant/release-config-npm"]
   }
 }
 ```
@@ -37,7 +37,6 @@ $ npm install --save-dev @answerbook/release-config-npm
   * The version number is dictated by the commit with the highest semver level
 * Increments the version of `package.json`
 * Generates + updates Changelog
-  * Includes Jira links for defined Issue Keys (`LOG-`, `INFRA-`, `REL-`, `ACC-`, `SCT-`)
   * Includes links to commit sha
   * Organizes changes by type
 * Publishes package to `npm.pkg.github.com`
@@ -46,5 +45,5 @@ $ npm install --save-dev @answerbook/release-config-npm
 
 ## Authors
 
-* [**Eric Satterwhite**](mailto:eric.satterwhite@logdna.com) &lt;eric.satterwhite@logdna.com&gt;
+* [**Eric Satterwhite**](mailto:esatterwhite@wi.rr.com) &lt;esatterwhite@wi.rr.com&gt;
 
