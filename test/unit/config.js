@@ -5,7 +5,7 @@ const config = require('../../index.js')
 const constants = require('../../lib/constants.js')
 
 function sortByType(a, b) {
-  return a < b ? -1 : 1
+  return a.type < b.type ? -1 : 1
 }
 
 test('release-config-logdna', async (t) => {
@@ -20,6 +20,7 @@ test('release-config-logdna', async (t) => {
   , breakingHeaderPattern: constants.BREAKING_HEADER_REGEX
   , headerCorrespondence: ['type', 'scope', 'subject']
   , issuePrefixes: ['#', 'gh-']
+  , changelogTitle: '## Changelog'
   , referenceActions: [
       'close', 'closes', 'closed', 'fix'
     , 'fixes', 'fixed', 'resolve', 'resolves'
