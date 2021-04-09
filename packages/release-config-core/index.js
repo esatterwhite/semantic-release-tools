@@ -16,6 +16,7 @@ module.exports = {
   , breakingHeaderPattern: constants.BREAKING_HEADER_REGEX
   , headerCorrespondence: ['type', 'scope', 'subject']
   , issuePrefixes: ['#', 'gh-']
+  , changelogTitle: '## Changelog'
   , referenceActions: [
       'close', 'closes', 'closed', 'fix'
     , 'fixes', 'fixed', 'resolve', 'resolves'
@@ -43,9 +44,7 @@ module.exports = {
 , plugins: [
     ['@semantic-release/commit-analyzer', null]
   , ['@semantic-release/release-notes-generator', null]
-  , ['@semantic-release/changelog', {
-      changelogTitle: '## Changelog'
-    }]
+  , ['@semantic-release/changelog', null]
   , ['@semantic-release/npm', null]
   , ['@semantic-release/git', {
       assets: ['package.json', 'CHANGELOG.md', '!**/node_modules/**']
