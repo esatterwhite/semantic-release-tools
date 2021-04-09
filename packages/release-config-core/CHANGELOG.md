@@ -1,3 +1,10 @@
+## @codedependant/release-config-core [1.0.2](https://github.com/esatterwhite/semantic-release-tools/compare/@codedependant/release-config-core@1.0.1...@codedependant/release-config-core@1.0.2) (2021-04-09)
+
+
+### Bug Fixes
+
+* **config**: unnest the changelog config [ecc2543](https://github.com/esatterwhite/semantic-release-tools/commit/ecc2543136aa0325f4fa4604cf125f8ac05f35d0) - Eric Satterwhite
+
 ## Changelog
 
 ## @codedependant/release-config-core [1.0.1](https://github.com/esatterwhite/semantic-release-tools/compare/@codedependant/release-config-core@1.0.0...@codedependant/release-config-core@1.0.1) (2021-03-02)
