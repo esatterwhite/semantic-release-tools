@@ -1,3 +1,13 @@
+## @codedependant/release-config-npm [1.0.2](https://github.com/esatterwhite/semantic-release-tools/compare/@codedependant/release-config-npm@1.0.1...@codedependant/release-config-npm@1.0.2) (2021-04-09)
+
+
+
+
+
+### Dependencies
+
+* **@codedependant/release-config-core:** upgraded to 1.0.2
+
 ## Changelog
 
 ## @codedependant/release-config-npm [1.0.1](https://github.com/esatterwhite/semantic-release-tools/compare/@codedependant/release-config-npm@1.0.0...@codedependant/release-config-npm@1.0.1) (2021-03-18)
