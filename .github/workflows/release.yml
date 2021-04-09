@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install
-        run: npm install -g pnpm && pnpm install -r
+        run: npm install -g pnpm@5 && pnpm install -r
       - name: test
         run: npm test
 
@@ -38,7 +38,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npx pnpm install -r
+      - run: npx pnpm@5 install -r
 
       - name: Publish
         run: npm run release
