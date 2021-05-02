@@ -11,6 +11,7 @@ function sortByType(a, b) {
 test('release-config-npm', async (t) => {
   t.type(config, 'object', 'package exports an object')
   t.strictEqual(config.npmPublish, true, 'npmPublish = true by default')
+  t.strictEqual(config.tarballDir, 'dist', 'tarballDir = dist by default')
   const plugins = config.plugins.map((plugin) => {
     return plugin[0]
   })
@@ -40,7 +41,6 @@ test('release-config-npm', async (t) => {
     return plugin[0] === '@semantic-release/github'
   })
   t.deepEqual(github[1], {
-    assets: 'dist/*.tgz'
-  , tarballDir: 'dist'
+    assets: 'dist/*'
   }, 'github assets pickup dist/*.tgz')
 }).catch(threw)

@@ -6,5 +6,6 @@ const remap = require('./lib/plugins/remap.js')
 module.exports = {
   ...config
 , npmPublish: true
+, tarballDir: 'dist'
 , plugins: remap(config.plugins)
 }
