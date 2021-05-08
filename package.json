@@ -1,0 +1,79 @@
+{
+  "name": "@codedependant/release-config-docker",
+  "version": "1.0.3",
+  "description": "Baseline shareable semantic-release configuration for publishing docker images",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/",
+    "index.js",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "tap",
+    "test:ci": "tap",
+    "pretest": "npm run lint",
+    "pretest:ci": "npm run lint"
+  },
+  "keywords": [
+    "semantic-release",
+    "semantic-release-config",
+    "shareable-config",
+    "codedependant"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/esatterwhite/semantic-release-tools.git",
+    "directory": "packages/release-config-docker"
+  },
+  "author": "Eric Satterwhite <esatterwhite@wi.rr.com>",
+  "bugs": {
+    "url": "https://github.com/esatterwhite/semantic-release-tools/issues"
+  },
+  "homepage": "https://github.com/esatterwhite/semantic-release-tools/packages/release-config-docker#readme",
+  "license": "MIT",
+  "tap": {
+    "100": true,
+    "browser": false,
+    "esm": false,
+    "ts": false,
+    "jsx": false,
+    "check-coverage": true,
+    "coverage-report": [
+      "text",
+      "text-summary",
+      "json",
+      "json-summary",
+      "html"
+    ],
+    "output-file": ".tap",
+    "files": [
+      "test/unit"
+    ],
+    "nyc-arg": [
+      "--exclude=test/",
+      "--exclude=coverage/",
+      "--cwd ../../"
+    ]
+  },
+  "dependencies": {
+    "@codedependant/release-config-npm": "^1.0.3",
+    "@codedependant/semantic-release-docker": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-codedependant": "^2.1.5",
+    "handlebars": "^4.7.7",
+    "tap": "^14.11.0",
+    "tap-parser": "^10.1.0",
+    "tap-xunit": "^2.4.1"
+  }
+}
