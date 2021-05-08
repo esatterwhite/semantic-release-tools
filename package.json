@@ -41,6 +41,7 @@
     "@codedependant/release-config-core": "*",
     "nyc": "^15.1.0",
     "tap": "^14.11.0",
-    "tap-parser": "^10.1.0"
+    "tap-parser": "^10.1.0",
+    "tap-xunit": "^2.4.1"
   }
 }
