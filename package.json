@@ -1,6 +1,6 @@
 {
   "name": "@codedependant/release-config-docker",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Baseline shareable semantic-release configuration for publishing docker images",
   "main": "index.js",
   "directories": {
@@ -65,7 +65,7 @@
     ]
   },
   "dependencies": {
-    "@codedependant/release-config-npm": "^1.0.3",
+    "@codedependant/release-config-npm": "1.0.3",
     "@codedependant/semantic-release-docker": "^3.1.0"
   },
   "devDependencies": {
