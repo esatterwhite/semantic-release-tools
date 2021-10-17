@@ -47,7 +47,13 @@ module.exports = {
   , ['@semantic-release/changelog', null]
   , ['@semantic-release/npm', null]
   , ['@semantic-release/git', {
-      assets: ['package.json', 'CHANGELOG.md', '!**/node_modules/**']
+      assets: [
+        'package.json'
+      , 'package-lock.json'
+      , 'pnpm-lock.yaml'
+      , 'CHANGELOG.md'
+      , '!**/node_modules/**'
+      ]
     , message: `release: ${year}-${month}-${day}, `
         + 'Version <%= nextRelease.version %> [skip ci]'
     }]
