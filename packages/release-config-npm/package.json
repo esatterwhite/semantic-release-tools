@@ -1,6 +1,6 @@
 {
   "name": "@codedependant/release-config-npm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Baseline shareable semantic-release configuration for publishing npm packages",
   "main": "index.js",
   "directories": {
@@ -65,7 +65,7 @@
     ]
   },
   "dependencies": {
-    "@codedependant/release-config-core": "1.0.2"
+    "@codedependant/release-config-core": "1.1.0"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
