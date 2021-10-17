@@ -1,3 +1,13 @@
+## @codedependant/release-config-docker [1.0.1](https://github.com/esatterwhite/semantic-release-tools/compare/@codedependant/release-config-docker@1.0.0...@codedependant/release-config-docker@1.0.1) (2021-10-17)
+
+
+
+
+
+### Dependencies
+
+* **@codedependant/release-config-npm:** upgraded to 1.0.4
+
 # @codedependant/release-config-docker 1.0.0 (2021-05-08)
 
 
