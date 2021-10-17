@@ -1,3 +1,10 @@
+# @codedependant/release-config-core [1.1.0](https://github.com/esatterwhite/semantic-release-tools/compare/@codedependant/release-config-core@1.0.2...@codedependant/release-config-core@1.1.0) (2021-10-17)
+
+
+### Features
+
+* **config**: Support pnpm in git config [1ab0293](https://github.com/esatterwhite/semantic-release-tools/commit/1ab029306b8ac4d804e6260faf1e92ef83d1aef5) - Eric Satterwhite
+
 ## @codedependant/release-config-core [1.0.2](https://github.com/esatterwhite/semantic-release-tools/compare/@codedependant/release-config-core@1.0.1...@codedependant/release-config-core@1.0.2) (2021-04-09)
 
 
