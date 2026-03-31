@@ -65,7 +65,8 @@
     ]
   },
   "dependencies": {
-    "@codedependant/release-config-core": "1.1.0"
+    "@codedependant/release-config-core": "1.1.0",
+    "@semantic-release/npm": "^13.1.5"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
