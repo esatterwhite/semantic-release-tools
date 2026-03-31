@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install
-        run: npm install -g pnpm@5 && pnpm install -r
+        run: npx pnpm@5 install -r
       - name: test
         run: npm test
 
@@ -32,6 +32,11 @@ jobs:
     name: release
     needs: test
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      issues: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,8 +49,9 @@ jobs:
         run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PACKAGE_LOCK: 'false'
           GIT_AUTHOR_NAME: 'Dependant Bot'
           GIT_AUTHOR_EMAIL: 'release-bot@codedependant.net'
           GIT_COMMITTER_NAME: 'Dependant Bot'
           GIT_COMMITTER_EMAIL: 'release-bot@codedependant.net'
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: 'false'
