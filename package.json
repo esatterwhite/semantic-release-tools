@@ -17,8 +17,7 @@
     "commitlint": "commitlint-codedependant",
     "test": "./scripts/test-ci.sh",
     "nyc": "nyc",
-    "test-all": "npx pnpm run --filter={packages/**} -r --if-present test:ci ",
-    "preinstall": "./scripts/preinstall.js",
+    "test-all": "npm run --if-present --workspaces test:ci ",
     "release": "multi-semantic-release"
   },
   "repository": {
@@ -36,12 +35,23 @@
     "url": "https://github.com/esatterwhite/semantic-release-tools/issues"
   },
   "homepage": "https://github.com/esatterwhite/semantic-release-tools#readme",
+  "overrides": {
+    "lodash-es": "4.15.0",
+    "semantic-release": "^23.x"
+  },
   "devDependencies": {
     "@codedependant/release-config-core": "*",
+    "@types/node": "^25.5.0",
     "multi-semantic-release": "^3.1.0",
     "nyc": "^15.1.0",
-    "tap": "^14.11.0",
+    "semantic-release": "^23.x",
+    "tap": "^21.6.2",
     "tap-parser": "^10.1.0",
     "tap-xunit": "^2.4.1"
+  },
+  "tap": {
+    "plugin": [
+      "!@tapjs/typescript"
+    ]
   }
 }
