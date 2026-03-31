@@ -26,11 +26,15 @@ function typeOf(type) {
 }
 
 function transform(commit) {
-  commit.type = typeOf(commit.type)
-  commit.shortHash = commit.hash.substring(0, 7)
-
-  for (const note of commit.notes) {
-    note.title = '**BREAKING CHANGES**'
+  const output = {
+    ...commit
+  , type: typeOf(commit.type)
+  , shortHash: commit.hash.substring(0, 7)
   }
-  return commit
+
+  output.notes = commit.notes.map((note) => {
+    return {...note, title: '**BREAKING CHANGES**'}
+  })
+
+  return output
 }
