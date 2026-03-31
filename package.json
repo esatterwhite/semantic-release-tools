@@ -17,7 +17,7 @@
     "commitlint": "commitlint-codedependant",
     "test": "./scripts/test-ci.sh",
     "nyc": "nyc",
-    "test-all": "pnpm run -r --if-present test:ci --filter={packages}",
+    "test-all": "npx pnpm run --filter={packages/**} -r --if-present test:ci ",
     "preinstall": "./scripts/preinstall.js",
     "release": "multi-release"
   },
