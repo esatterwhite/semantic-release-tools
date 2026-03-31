@@ -19,7 +19,7 @@
     "nyc": "nyc",
     "test-all": "npx pnpm run --filter={packages/**} -r --if-present test:ci ",
     "preinstall": "./scripts/preinstall.js",
-    "release": "multi-release"
+    "release": "multi-semantic-release"
   },
   "repository": {
     "type": "git",
@@ -37,8 +37,8 @@
   },
   "homepage": "https://github.com/esatterwhite/semantic-release-tools#readme",
   "devDependencies": {
-    "@codedependant/multi-release": "^1.0.6",
     "@codedependant/release-config-core": "*",
+    "multi-semantic-release": "^3.1.0",
     "nyc": "^15.1.0",
     "tap": "^14.11.0",
     "tap-parser": "^10.1.0",
