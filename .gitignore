@@ -107,3 +107,4 @@ dist
 # vim files
 *.swp
 *.vim
+.tap-output

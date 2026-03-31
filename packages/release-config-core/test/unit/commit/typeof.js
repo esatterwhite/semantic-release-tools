@@ -4,85 +4,85 @@ const {test, threw} = require('tap')
 const {typeOf} = require('../../../lib/commit.js')
 
 test('commit#typeOf', async (t) => {
-  t.strictEqual(
+  t.same(
     typeOf('build')
   , 'Build System'
   , 'build -> Build System'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('chore')
   , 'Chores'
   , 'chore -> Chores'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('ci')
   , 'Continuous Integration'
   , 'ci -> Continuous Integration'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('doc')
   , 'Documentation'
   , 'doc -> Documentation'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('feat')
   , 'Features'
   , 'feat -> Features'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('fix')
   , 'Bug Fixes'
   , 'fix -> Bug Fixes'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('lint')
   , 'Lint'
   , 'lint -> Lint'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('perf')
   , 'Performance Improvements'
   , 'perf -> Performance Improvements'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('refactor')
   , 'Code Refactoring'
   , 'refactor -> Code Refactoring'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('revert')
   , 'Reverts'
   , 'revert -> Reverts'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('style')
   , 'Style'
   , 'style -> Style'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('test')
   , 'Tests'
   , 'test -> Tests'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('unknown')
   , 'Miscellaneous'
   , 'unknown -> Miscellaneous'
   )
 
-  t.strictEqual(
+  t.same(
     typeOf('foobar')
   , 'Miscellaneous'
   , 'foobar -> Miscellaneous'

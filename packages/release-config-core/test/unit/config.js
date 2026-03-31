@@ -13,7 +13,7 @@ test('release-config-logdna', async (t) => {
     return plugin[0]
   })
 
-  t.strictEqual(config.npmPublish, false, 'npmPublish = false by default')
+  t.same(config.npmPublish, false, 'npmPublish = false by default')
   t.match(config.parserOpts, {
     noteKeywords: ['BREAKING CHANGES', 'BREAKING CHANGE', 'BREAKING']
   , headerPattern: /^(\w*)(?:\((.*)\))?!?: (.*)$/
@@ -28,7 +28,7 @@ test('release-config-logdna', async (t) => {
     ]
   }, 'default commit parser options')
 
-  t.deepEqual(config.releaseRules.sort(sortByType), [
+  t.same(config.releaseRules.sort(sortByType), [
     {breaking: true, release: 'major'}
   , {revert: true, release: 'patch'}
   , {type: 'build', release: 'patch'}
@@ -43,7 +43,7 @@ test('release-config-logdna', async (t) => {
   , {type: 'style', release: 'patch'}
   ].sort(sortByType), 'expected default release rules')
 
-  t.deepEqual(plugins, [
+  t.same(plugins, [
     '@semantic-release/commit-analyzer'
   , '@semantic-release/release-notes-generator'
   , '@semantic-release/changelog'

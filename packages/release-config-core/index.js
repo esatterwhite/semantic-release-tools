@@ -42,10 +42,10 @@ module.exports = {
   , {type: 'style', release: 'patch'}
   ]
 , plugins: [
-    ['@semantic-release/commit-analyzer', null]
-  , ['@semantic-release/release-notes-generator', null]
-  , ['@semantic-release/changelog', null]
-  , ['@semantic-release/npm', null]
+    ['@semantic-release/commit-analyzer', {}]
+  , ['@semantic-release/release-notes-generator', {}]
+  , ['@semantic-release/changelog', {}]
+  , ['@semantic-release/npm', {}]
   , ['@semantic-release/git', {
       assets: [
         'package.json'
@@ -57,6 +57,6 @@ module.exports = {
     , message: `release: ${year}-${month}-${day}, `
         + 'Version <%= nextRelease.version %> [skip ci]'
     }]
-  , ['@semantic-release/github', null]
+  , ['@semantic-release/github', {}]
   ]
 }
