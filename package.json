@@ -4,20 +4,12 @@
   "description": "Collection of shared configurations and tools for semantic-release",
   "main": "index.js",
   "workspaces": [
-    "packages/*"
+    "packages/release-config-core"
   ],
-  "release": {
-    "npmPublish": true,
-    "branches": [
-      "main"
-    ],
-    "extends": "@codedependant/release-config-core"
-  },
   "scripts": {
     "commitlint": "commitlint-codedependant",
-    "test": "./scripts/test-ci.sh",
     "nyc": "nyc",
-    "test-all": "npm run --if-present --workspaces test:ci ",
+    "test": "npm run --if-present --workspace @codedependant/release-config-core test:ci ",
     "release": "multi-semantic-release"
   },
   "repository": {
@@ -37,14 +29,18 @@
   "homepage": "https://github.com/esatterwhite/semantic-release-tools#readme",
   "overrides": {
     "lodash-es": "4.15.0",
-    "semantic-release": "^23.x"
+    "semantic-release": "^23.1.1",
+    "@semantic-release/npm": "13.1.5",
+    "@semantic-release/changelog": {
+      "semantic-release": "^23.1.1"
+    }
   },
   "devDependencies": {
     "@codedependant/release-config-core": "*",
     "@types/node": "^25.5.0",
     "multi-semantic-release": "^3.1.0",
     "nyc": "^15.1.0",
-    "semantic-release": "^23.x",
+    "semantic-release": "^23.1.1",
     "tap": "^21.6.2"
   },
   "tap": {
