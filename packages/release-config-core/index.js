@@ -40,6 +40,7 @@ module.exports = {
   , {type: 'lib', release: 'patch'}
   , {type: 'perf', release: 'minor'}
   , {type: 'style', release: 'patch'}
+  , {type: 'pkg', scope: 'setup', release: false}
   ]
 , plugins: [
     ['@semantic-release/commit-analyzer', {}]

@@ -41,6 +41,7 @@ test('release-config-logdna', async (t) => {
   , {type: 'lib', release: 'patch'}
   , {type: 'perf', release: 'minor'}
   , {type: 'style', release: 'patch'}
+  , {type: 'pkg', scope: 'setup', release: false}
   ].sort(sortByType), 'expected default release rules')
 
   t.same(plugins, [
